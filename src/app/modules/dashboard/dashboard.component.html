@@ -1,0 +1,16 @@
+<po-page-default [p-title]="'Dashboard'" [p-breadcrumb]="breadcrumb">
+    <po-widget [p-title]="'Entregas por motorista'">
+        <po-table [p-columns]="deliveryProgressByDriverColumns" [p-items]="deliveryProgressByDriverItems"
+            [p-hide-table-search]="false"> </po-table>
+    </po-widget>
+    <hr />
+    <po-widget [p-title]="'Entregas com Insucesso'">
+        <po-table [p-columns]="deliveryFailureQuantityByDriverColumns" [p-items]="deliverFailureQuantityByDriverItems"
+            [p-hide-table-search]="false"> </po-table>
+    </po-widget>
+    <hr />
+    <po-widget [p-title]="'Entregas por bairro'">
+        <po-table [p-columns]="deliveryProgressByBairroColumns" [p-items]="deliverProgressByBairroItems"
+            [p-hide-table-search]="false"> </po-table>
+    </po-widget>
+</po-page-default>

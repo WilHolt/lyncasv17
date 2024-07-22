@@ -1,0 +1,22 @@
+<po-page-list #poPageList p-title="Entregas" [p-filter]="filterSettings" [p-breadcrumb]="breadcrumbs">
+  <po-modal #advancedFilterModal p-title="Filtros Avançados" [p-primary-action]="advancedFilterPrimaryAction">
+    <form #f="ngForm">
+      <po-checkbox-group name="status" (ngModelChange)="updateStatus($event)" p-label="Status" [p-options]="statusOptions">
+      </po-checkbox-group>
+    </form>
+  </po-modal>
+  <po-list-view p-property-link="url" p-property-title="name" [p-items]="filteredDeliveryItems">
+    <ng-template p-list-view-content-template let-item [p-title]="itemTitle">
+      <div class="po-row">
+        <po-info class="po-lg-4" p-label="ID" [p-value]="item.id"></po-info>
+        <po-info class="po-lg-4" p-label="Motorista" [p-value]="item.name"></po-info>
+        <po-info class="po-lg-4" p-label="STATUS" [p-value]="item.status"></po-info>
+        <po-info class="po-lg-4" p-label="Origem"
+          [p-value]=" ([item.originCostumer, item.originAddress, item.originNeighborhood, item.originCity] | address:',':'-')"></po-info>
+        <po-info class="po-lg-4" p-label="Destino"
+          [p-value]=" ([item.destinationCostumer, item.destinationAddress, item.destinationNeighborhood, item.destinationCity] | address:',':'-')"></po-info>
+
+      </div>
+    </ng-template>
+  </po-list-view>
+</po-page-list>
