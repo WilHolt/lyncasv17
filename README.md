@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
+obs: RECOMENDADO INSTALACAO DO PLUGIN REDUX DEVTOOLS PARA CHROME PARA VISUALIZAÇÃO DA INTERFACE DE GERENCIAMENTO DE ESTADOS DO NGXS.
+
+Projeto utilizando PO UI, NGXs e Angular na versão 17 ( especificamente para poder utilizar o PO UI que só tinha suporte para v17 até o momento).
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
